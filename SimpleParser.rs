@@ -1,4 +1,12 @@
 
+//EBNF grammar given as:
+//<S> ::= { a } <X> | b <X>
+//<X> ::= c | d
+//we interpreted the given EBNF grammar as:
+
+//there must not be 'cd'
+//there can be only 'c' or 'd' 
+//if there is neither c nor d, syntax error at char_pos = 0
 
 struct SimpleParser{
 	
@@ -11,15 +19,11 @@ struct SimpleParser{
 	input: String, }
 
 
-
 impl SimpleParser{} 
-
 
 
 fn initializer(input:&str)->(){ }
 
-
-	
 	fn fun_s(input:&str)->(){
 		
 		let CharC = 'c'; 
@@ -54,7 +58,6 @@ fn initializer(input:&str)->(){ }
 		
 	}
 		
-		
 		//a boolean function to check if there is c or d in the input string 
 		//but cannot occur both c and d consecutive or adjacent 
 		
@@ -83,7 +86,6 @@ fn initializer(input:&str)->(){ }
 			
 		}
 		
-		
 	
 		//a void function to get the next character 
 		
@@ -93,13 +95,11 @@ fn initializer(input:&str)->(){ }
 			for  char_pos in 0..input.len() {
 				
 				println!("{}", char_pos); 
-			}
-			
+			}	
 		}
 		
 		
 //driver test 
-	
 	
 	
 fn main() {
@@ -133,8 +133,6 @@ fn main() {
 	let input6 = "";
 	
 	fun_s(input6); 
-	
-	
 		
 	
 //List of Extra Test Cases Used for Debugging:
@@ -159,9 +157,6 @@ fn main() {
 
 	//Input is valid
 	//Syntax error at character position 0
-	//Input is valid
-	
-	
-	
+	//Input is valid	
 	
 }
